@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
+const baseUrl = 'https://google-search72.p.rapidapi.com/search';
 
 export const StateContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
@@ -13,7 +13,6 @@ export const StateContextProvider = ({ children }) => {
 
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
-      url: 'https://google-search72.p.rapidapi.com/search',
       params: {
         q: 'word cup',
         gl: 'us',
