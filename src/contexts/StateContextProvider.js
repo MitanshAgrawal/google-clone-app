@@ -13,8 +13,16 @@ export const StateContextProvider = ({ children }) => {
 
     const res = await fetch(`${baseUrl}${url}`, {
       method: 'GET',
+      url: 'https://google-search72.p.rapidapi.com/search',
+      params: {
+        q: 'word cup',
+        gl: 'us',
+        lr: 'lang_en',
+        num: '10',
+        start: '0'
+      },
       headers: {
-        'x-rapidapi-host': 'google-search3.p.rapidapi.com',
+        'x-rapidapi-host': 'google-search72.p.rapidapi.com',
         'x-rapidapi-key': process.env.REACT_APP_API_KEY,
       },
     });
